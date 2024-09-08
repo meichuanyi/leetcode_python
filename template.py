@@ -1,20 +1,21 @@
 from itertools import accumulate
+from scipy.optimize import linear_sum_assignment
+from functools import cache
+from typing import *
+from math import inf
+import math
+from collections import Counter, defaultdict
+from bisect import bisect_left, bisect_right
+from sortedcontainers import SortedList, SortedDict, SortedSet
+import numpy as np
+MOD = int(1e9 + 7)
 
 
-# 求前缀和
-numbers = [1, 2, 3, 4, 5]
-result = list(accumulate(numbers, initial=0))
-print(result)  # 输出: [0, 1, 3, 6, 10, 15]
-
-# 邻接矩阵
-n = 10
-edges = [[0, 1]]
-graph = [[] for _ in range(n)]
-for u, v in edges:
-    graph[u].append(v)
-    graph[v].append(u)
+@cache
+def fac(x):
+    return math.factorial(x)
 
 
-
+                                                                                                                            
 
 
